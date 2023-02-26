@@ -65,6 +65,7 @@ window.onscroll = function () {
 	sections.forEach((section) => {
 		// section.classList.remove("active")
 		if(window.scrollY > section.offsetTop -200 && window.scrollY < section.offsetTop + section.offsetHeight -200){
+			console.log(section.id)
 			nav_links.forEach((link) => {
 				link.classList.remove("active")
 			}
