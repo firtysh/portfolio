@@ -439,6 +439,9 @@ body::after{
 		font-size: 30px;
 		margin: 0px 5px;
 	}
+	body::after{
+		font-size: 10px;
+	}
 }
 
 
