@@ -5,6 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+<link rel="shortcut icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+<link rel="shortcut icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+<link rel="shortcut icon" sizes="192x192" href="./favicon_io/android-chrome-192x192.png" type="image/png">
+<link rel="shortcut icon" sizes="512x512" href="./favicon_io/android-chrome-512x512.png" type="image/png">
 	<title>Suman Mandal</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="style.css">
@@ -15,7 +20,7 @@
 <body>
 	<header>
 		<nav>
-			<div class="logo" id="logo"><a href="/" class="active">SM</a></div>
+			<div class="logo" id="logo"><a href="./">SM</a></div>
 			<ul>
 				<li><a href="#skills" class="nav-link" data-value="SKILLS">Skills</a></li>
 				<li><a href="#projects" class="nav-link" data-value="PROJECTS">Projects</a></li>
@@ -36,6 +41,13 @@
 					Information Technology from <a href="https://jgec.ac.in/" target="_blank">Jalpaiguri Government Engineering
 						College</a>. I am always looking for opportunities to learn and grow.
 				</h4>
+				<div class="social">
+					<a href="https://www.linkedin.com/in/sumanmandal-03/" target="_blank"><i class="fab fa-linkedin"></i></a>
+					<a href="https://www.github.com/firtysh" target="_blank"><i class="fab fa-github"></i></a>
+					<a href="https://www.instagram.com/_suman.aes/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.facebook.com/profile.php?id=100044273148241" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="mailto:sm2450@it.jgec.ac.in" target="_blank"><i class="fas fa-envelope"></i></a>
+				</div>
 			</div>
 			<div class="hero-img">
 				<img src="images/hero-img.png" alt="hero-img">
@@ -285,9 +297,10 @@
 	</main>
 	<footer>
 		<section class="footer" id="contact">
-			<h2>CONTACT</h2>
+			<h2 data-value="CONTACT" id="contact-title">CONTACT</h2>
 			<hr>
 			<div class="contact-container">
+				<img src="./images/contact1.svg" alt="" class="contact-image">
 				<!-- contact form -->
 				<form action="mailto:sm2450@it.jgec.ac.in"  class="contact-form">
 					<div class="form-group">
@@ -300,14 +313,14 @@
 					</div>
 					<div class="form-group">
 						<label for="message">Message</label>
-						<textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
+						<textarea name="message" id="message" rows="5" placeholder="Enter your message" required></textarea>
 					</div>
 					<button type="submit" class="btn">Send</button>
 				</form>
-
+				<!-- contact form end -->
 			</div>
 		</section>
 	</footer>
 </body>
 
-</ht
+</html>

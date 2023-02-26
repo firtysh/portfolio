@@ -5,6 +5,8 @@ const full_name = document.querySelector('#full_name');
 const skills = document.querySelector("#skills-title")
 const projects = document.querySelector("#projects-title")
 const education = document.querySelector("#edu-title")
+const contact = document.querySelector("#contact-title")
+const sections= document.querySelectorAll("section")
 const AtoZ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const animate_title = (element) => {
 	let count = 0;
@@ -47,4 +49,28 @@ education.addEventListener('mouseover', function func(e) {
 	document.querySelector("section#education hr").style.background = 'linear-gradient(90deg,rgb(255, 46, 99),transparent)'
 	education.removeEventListener('mouseover', func)
 })
+contact.addEventListener('mouseover', function func(e) {
+	animate_title(contact)
+	contact.style.color = "rgb(255, 46, 99)"
+	document.querySelector("section#contact hr").style.background = 'linear-gradient(90deg,rgb(255, 46, 99),transparent)'
+	contact.removeEventListener('mouseover', func)
+})
 animate_title(full_name)
+
+sections.forEach((section) => {
+	console.log(section.offsetTop)
+})
+window.onscroll = function () {
+	// console.log(window.scrollY)
+	sections.forEach((section) => {
+		// section.classList.remove("active")
+		if(window.scrollY > section.offsetTop -200 && window.scrollY < section.offsetTop + section.offsetHeight -200){
+			nav_links.forEach((link) => {
+				link.classList.remove("active")
+			}
+			)
+			document.querySelector(`.nav-link[href="#${section.id}"]`).classList.add("active")
+		}
+	});
+	
+}
