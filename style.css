@@ -429,8 +429,7 @@ body::after{
 		justify-content: center;
 	}
 	.hero-text{
-		max-width: 100%;
-		text-align: justify;
+		max-width: 100%;		
 	}
 	.hero-img {
 		display: none;
