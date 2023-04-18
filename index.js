@@ -7,6 +7,9 @@ const projects = document.querySelector("#projects-title")
 const education = document.querySelector("#edu-title")
 const contact = document.querySelector("#contact-title")
 const sections= document.querySelectorAll("section")
+const menu_open = document.querySelector('#menu_open')
+const menu_close = document.querySelector('#menu_close')
+const nav = document.querySelector('#nav-ul')
 const AtoZ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const animate_title = (element) => {
 	let count = 0;
@@ -26,10 +29,29 @@ const animate_title = (element) => {
 	}, 50)
 }
 
+function toggle_menu(){
+	console.log(menu_open.hidden, menu_close.hidden);
+	if(menu_open.hidden===true && menu_close.hidden===false)
+	{
+		menu_open.hidden=false
+		menu_close.hidden=true
+		nav.style.left = '-100vw'
+	}
+	else{
+		menu_close.hidden=false
+		menu_open.hidden=true
+		nav.style.left='0';
+	}
+}
+
 nav_links.forEach((link) => {
 	link.addEventListener('mouseover', (e) => {
 		animate_title(e.target)
 	});
+	link.addEventListener('click',()=>{
+		toggle_menu()
+		
+	})
 })
 skills.addEventListener('mouseover', function func(e) {
 	animate_title(skills)
@@ -70,8 +92,17 @@ window.onscroll = function () {
 				link.classList.remove("active")
 			}
 			)
+			if(section.id!=='home')
 			document.querySelector(`.nav-link[href="#${section.id}"]`).classList.add("active")
 		}
 	});
 	
 }
+
+
+menu_open.addEventListener('click',function func(e){
+	toggle_menu()
+})
+menu_close.addEventListener('click',function func(e){
+	toggle_menu()
+})

@@ -3,7 +3,7 @@
 
 :root,
 :root.theme-1 {
-	--bg-color: #252A34;
+	--bg-color: #252a34;
 	--primary-color: #ff2e63;
 	--secondary-color: #08d9d6;
 	--white-color: #EAEAEA;
@@ -43,7 +43,7 @@ body {
 /*  Navigation Bar Style Start */
 header nav {
 	position: fixed;
-	z-index: 10;
+	z-index: 100;
 	width: 100%;
 	padding: 10px 10%;
 	background-color: var(--bg-color);
@@ -51,12 +51,6 @@ header nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-nav div a {
-	font-size: 40px;
-	font-weight: bold;
-	font-family: 'Julee', cursive;
-	text-shadow: 0 0 5px var(--shadow);
 }
 nav div a:hover,
 nav div a.active {
@@ -78,6 +72,8 @@ nav ul li a {
 nav ul li a:hover {
 	color: var(--primary-color);
 }
+
+
 /* Navigation Bar Style End */
 
 main {
@@ -123,7 +119,6 @@ hr {
 .hero-text h4 {
 	margin-top: 20px;
 	color: var(--white-color);
-	text-justify: newspaper;
 }
 .hero-text div.social{
 	padding-top: 80px;
@@ -394,9 +389,14 @@ body::after{
 	box-shadow: 0px -1px 10px var(--shadow);
 	/* z-index: -1;	 */
 }
-
+.menu_btn{
+	display: none;
+}
 /* Responsive Style */
-@media (max-width:767px){
+@media (max-width:767px){		/* Medium */
+	nav ul li a {
+		font-size: 17px;
+	}
 	.edu-card:nth-child(even){
 		padding-left: 0px;
 	}
@@ -419,7 +419,35 @@ body::after{
 		margin-bottom: 20px;
 	}
 }
-@media (max-width:575px){
+@media (max-width:575px){			/* Small */ 
+	.menu_btn{
+		display: block;
+	}
+	nav{
+		z-index: 100;
+	}
+	nav ul li a {
+		font-size: 20px;
+	}
+	nav ul li{
+		padding: 30px;
+	}
+	nav ul{
+		z-index: -10;
+		position: absolute;
+		background: var(--bg-color);
+		left: -100vw;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+		width: 100vw;
+		text-align: center;
+		align-items: center;
+	}
+
+
 	.contact-container{
 		margin:40px 0px;
 		padding: 30px 20px;
@@ -442,6 +470,7 @@ body::after{
 	body::after{
 		font-size: 10px;
 	}
+	
 }
 
 
